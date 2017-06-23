@@ -1,10 +1,6 @@
 class GamesController < ApplicationController
 
     def index
-      p "it's here "
-        p "it's here "
-
-          p "it's here "
 
       if Game.all.length === 2
         Game.last.destroy
