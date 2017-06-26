@@ -26,6 +26,14 @@ class GamesController < ApplicationController
     end
 
     def update
+      if Game.all.length === 2
+        Game.last.destroy
+        Game.last.destroy
+
+        render json: true
+      else
+          render json: false
+      end
 
     end
     private
